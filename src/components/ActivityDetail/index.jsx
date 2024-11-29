@@ -7,19 +7,19 @@ const ActivityDetail = () => {
       id: 1,
       hostname: "CRB-BAST-EN1-C55A2",
       totalInterface: 3,
-      status: "Up",
+      status: "OK",
     },
     {
       id: 2,
       hostname: "CRB-ASHS-EN1-C55A2",
       totalInterface: 3,
-      status: "Up",
+      status: "OK",
     },
     {
       id: 3,
       hostname: "CRB-KUDA-EN1-C55A2",
       totalInterface: 3,
-      status: "Up",
+      status: "OK",
     },
   ];
 
@@ -33,17 +33,19 @@ const ActivityDetail = () => {
             <th scope="col">Hostname</th>
             <th scope="col">Total Interface</th>
             <th scope="col">Status</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           {data.map((activity, index) => (
             <tr key={index}>
               <td>{activity.id}</td>
-              <Link to={`/activity/${activity.hostname}`}>
-                <td>{activity.hostname}</td>
-              </Link>
+              <td>{activity.hostname}</td>
               <td>{activity.totalInterface}</td>
               <td>{activity.status}</td>
+              <td>
+                <Link to={`/detail-hostname/${activity.hostname}`}>Detail</Link>
+              </td>
             </tr>
           ))}
         </tbody>

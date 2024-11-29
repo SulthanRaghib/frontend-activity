@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import Activity from "./pages/Activity";
 import { path } from "framer-motion/client";
 import ActivityDetail from "./components/ActivityDetail";
-// import About from "./pages/About";
+import Hostname from "./components/Hostname";
 
 const App = () => {
   const routes = [
@@ -20,7 +20,8 @@ const App = () => {
     },
     {
       id: 3,
-      path: "/activity/:hostname",
+      path: "/detail-hostname/:hostname",
+      element: <Hostname />,
     },
   ];
 

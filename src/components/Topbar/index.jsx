@@ -3,7 +3,10 @@ import React from "react";
 const Topbar = ({ textSatu, textDua, textTiga }) => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        className="navbar navbar-expand-lg "
+        style={{ background: "#6266c4" }}
+      >
         <div className="container-fluid">
           <button
             className="navbar-toggler"
