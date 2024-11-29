@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="d-flex flex-nowrap">
+    <div className="d-flex flex-nowrap" style={{ minHeight: "100%" }}>
       {/* Sidebar */}
       <Sidebar />
 
